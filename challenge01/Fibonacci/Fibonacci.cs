@@ -1,6 +1,6 @@
 namespace Fibonacci;
 
-public class Fibonacci
+public static class Fibonacci
 {
     /// <summary>
     /// Verifica se um número é um número de Fibonacci.
@@ -13,12 +13,12 @@ public class Fibonacci
         if (number == 0 || number == 1)
             return true;
 
-        int previous = 0;
-        int current = 1;
+        var previous = 0;
+        var current = 1;
 
         while (current < number)
         {
-            int next = previous + current;
+            var next = previous + current;
             previous = current;
             current = next;
         }

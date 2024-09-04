@@ -1,7 +1,8 @@
-﻿Console.WriteLine("Informe o número para verificar se ele é um número de Fibonacci: ");
-int number = int.Parse(Console.ReadLine());
+﻿using static Fibonacci.Fibonacci;
 
-if (Fibonacci.Fibonacci.IsFibonacci(number))
-    Console.WriteLine($"{number} é um número de Fibonacci.");
-else
-    Console.WriteLine($"{number} não é um número de Fibonacci.");
+Console.WriteLine("Informe o número para verificar se ele é um número de Fibonacci: ");
+var number = int.Parse(Console.ReadLine() ?? string.Empty);
+
+Console.WriteLine(IsFibonacci(number)
+    ? $"{number} é um número de Fibonacci."
+    : $"{number} não é um número de Fibonacci.");
